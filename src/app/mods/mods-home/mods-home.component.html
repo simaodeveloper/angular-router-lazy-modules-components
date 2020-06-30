@@ -1,0 +1,20 @@
+<app-divider>
+  Modal Component
+</app-divider>
+<button (click)="toggleModalHandler()">Open Modal</button>
+<app-modal *ngIf="modalOpen" (close)="toggleModalHandler()">
+  <ng-container modalTitle>
+    <h1>Modal!</h1>
+  </ng-container>
+
+  <p>Some content for the modal window should go right here!</p>
+
+  <ng-container modalFooter>
+    <!-- <button class="ui button" (click)="toggleModalHandler()">CLOSE ME AHHHHHH!</button> -->
+  </ng-container>
+</app-modal>
+
+<app-divider>
+  Accordion Component
+</app-divider>
+<app-accordion [items]="items"></app-accordion>
